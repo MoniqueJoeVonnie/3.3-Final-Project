@@ -18,17 +18,25 @@
                 <div class="nav__logo--title">Treact</div>
             </div>
         </div>
-        <div class="nav__links">
-            <a href="#about" class="nav__link">About</a>
-            <a href="#blog" class="nav__link">Blog</a>
-            <a href="#pricing" class="nav__link">Pricing</a>
-            <a href="#contact-us" class="nav__link">Contact Us</a>
-            <a href="#login" class="nav__link">Login</a>
+        <div class="row links_row">
+             <div class="nav__links">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#blog" class="nav__link">Blog</a>
+                <a href="#pricing" class="nav__link">Pricing</a>
+                 <a href="#contact-us" class="nav__link">Contact Us</a>
+                <a href="#login" class="nav__link">Login</a>
+                <a href="#primary" class="nav__link nav__link--primary">Sign Up</a>
+             </div>
+                 <button class="btn__menu" onclick="openMenu()">
+                </button>
+             </div>
         </div>
-        <button class="btn__menu" onclick="openMenu()"></button>
-        <button class="home_description--button" onclick="openMenu()">Sign Up</button>
-
     </nav>
+    <div class= "menu">
+        <button class="btn__menu btn__menu--close" oneclick="closeMenu()"></button>
+    </div>
+
+
     <header>
         <div class="row">
             <div class="home__description">
