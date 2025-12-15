@@ -27,28 +27,43 @@
                 <a href="#login" class="nav__link">Login</a>
                 <a href="#primary" class="nav__link nav__link--primary">Sign Up</a>
              </div>
-                 <button class="btn__menu" onclick="openMenu()">
-                </button>
+        </div>     
+        <button class="btn__menu" onclick="openMenu()">
+             <i class="fas fa-bars"></i>
+        </button>
+             </div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" oneclick="closeMenu()">
+                  <i class="fas fa-times"></i>
+        </button>
              </div>
         </div>
+    </div>            
     </nav>
-    <div class= "menu">
-        <button class="btn__menu btn__menu--close" oneclick="closeMenu()"></button>
-    </div>
-
 
     <header>
-        <div class="row">
-            <div class="home__description">
-                <p class= "subheader">Beautiful React Templates for you.</p>
-            </div>
-            <button class="home_description--button">Sign Up</button>
-            <button class="home_description--button">Get Started</button>
-            <figure>
-                <img src="./assets-2/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Home page image">
-                <img src="./assets-2/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Home page image">
-            </figure>
+        <div class="container">
+            <div class="row">
+            <div class="header__description">
+                <h1>
+                    Beautiful React Templates for you<span class="purple">for you.</span>
+                </h1>
+                <p class="header__description--para">
+                    Our templates are easy to setup, understand and customize.  Fully modular components with a variety of pages and components.
+                </p>
+        <section id= "email">
+            <form action"">
+                 <input type="email" placeholder="Your email address">
+                 <button>Get Started</button>
+            </form>
+        </section>    
+            </div>    
         </div>
     </header>
 </section>
 </body>
+
+</div>
+        
+            <figure>
+                <img src="./assets-2/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Home page image">
+                <img src="./assets-2/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Home page image">
