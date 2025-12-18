@@ -69,9 +69,12 @@ nav {
     padding-top: 32px;
 }
 
-.nav__link {
-    flex-direction: row;
-    justify-content: space-between;
+.nav__links {
+   display: flex;
+   list-style: none;
+   gap: 24px;
+   flex-direction: row;
+   justify-content: space-between;
 }
 
 .nav__row {
