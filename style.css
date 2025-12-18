@@ -1,4 +1,18 @@
 style.css
+:host, :root {
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+
+:host, :root {
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+:host, :root {
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -55,13 +69,6 @@ nav {
     padding-top: 32px;
 }
 
-.nav__logo--img {
-    height: 40px;
-    width: 40px;
-}
-
-
-
 .nav__row {
     display: flex;
     justify-content: space-between;
@@ -73,6 +80,32 @@ nav {
     margin: 8px 0;
     padding-bottom: 4px;
 }
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.nav__logo--title {
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 12px;
+    padding-bottom: 2px;
+    letter-spacing: 0.6px;
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: all 300ms;
+    text-decoration: none;
+}
+
+
 
 
 .btn__menu {
