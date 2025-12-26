@@ -859,68 +859,6 @@ address, article, aside, div, footer, header, hgroup, main, nav, search, section
     cursor: pointer;
 }
 
-input:is([type="button"], [type="submit"], [type="reset"]), input[type="file"]::file-selector-button, button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: buttontext;
-    padding-block-start: 2px;
-    padding-block-end: 3px;
-    padding-inline-start: 6px;
-    padding-inline-end: 6px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-    border-top-style: outset;
-    border-right-style: outset;
-    border-bottom-style: outset;
-    border-left-style: outset;
-    border-top-color: buttonface;
-    border-right-color: buttonface;
-    border-bottom-color: buttonface;
-    border-left-color: buttonface;
-    border-image-source: none;
-    border-image-slice: 100%;
-    border-image-width: 1;
-    border-image-outset: 0;
-    border-image-repeat: stretch;
-    background-color: buttonface;
-    box-sizing: border-box;
-}
-
-input, textarea, select, button {
-    margin-top: 0em;
-    margin-right: 0em;
-    margin-bottom: 0em;
-    margin-left: 0em;
-    font-style: ;
-    font-variant-caps: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    font-size-adjust: ;
-    font-kerning: ;
-    font-variant-alternates: ;
-    font-variant-ligatures: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-variant-position: ;
-    font-feature-settings: ;
-    font-optical-sizing: ;
-    font-variation-settings: ;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-}
-
 button {
     appearance: auto;
 }
@@ -933,6 +871,8 @@ button {
     z-index: 2;
     display: flex;
 }
+
+
 
 .quality__grid {
     transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
@@ -961,6 +901,10 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
 
 address, article, aside, div, footer, header, hgroup, main, nav, search, section {
     display: block;
+}
+
+.quality__img {
+    z-index: 1;
 }
 
 
@@ -1684,8 +1628,17 @@ button.btn {
     margin-top: 64px;
 }
 
+.values__description, .values__img {
+    width: 50%;
+}
 
+.values__description {
+    padding: 32px 64px 32px 0;
+}
 
+.container {
+    padding: 96px 0;
+}
 
 
 
@@ -1705,6 +1658,425 @@ PRICING ↓
     flex-direction: column;
     align-items: center;
 }
+
+section {
+    padding: 0 32px;
+}
+
+#pricing .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    #features .section__title, #pricing .section__title {
+        font-size: 48px;
+    }
+}
+
+#features .section__title, #pricing .section__title {
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .section__title {
+        font-size: 36px;
+    }
+}
+
+.section__title {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(36, 62, 99);
+    line-height: 1.5;
+    margin: 16px 0;
+    letter-spacing: 0.025em;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    #features .section__title, #pricing .section__title {
+        font-size: 48px;
+    }
+}
+
+#pricing .section__para {
+    max-width: 576px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .section__para {
+        font-size: 16px;
+    }
+}
+
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.625;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (max-width: 1024px) {
+    .plan {
+        margin-right: 0px;
+    }
+}
+
+.plan {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    width: 100%;
+    max-width: 24rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 2rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    color: rgb(26 32 44);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plan__top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    line-height: 1.625;
+}
+
+.plan:nth-child(2n+1) .plan__name, .plan:nth-child(2n+1) .plan__price, .plan:nth-child(2n+1) .plan__target {
+    color: #1a202c;
+}
+
+.plan__price {
+    font-size: 48px;
+    margin: 4px 0;
+}
+
+.plan__name, .plan__price, .plan__duration {
+    font-weight: bold;
+    line-height: 1.625;
+}
+
+.plan:nth-child(2n+1) .plan__duration {
+    color: #a0aec0;
+}
+
+.plan__target {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.025em;
+}
+
+.plan:nth-child(1) .plan__middle, .plan:nth-child(3) .plan__middle {
+    border-top: 2px solid rgb(229, 231, 235);
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.plan__middle {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 2rem;
+}
+
+.plan__feature {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #718096;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@media (max-width: 1280px) {
+    .plan__bottom {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.plan__bottom {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.plan:nth-child(1) .plan__stripe, .plan:nth-child(1) .plan__button {
+    color: #f7fafc;
+    background: linear-gradient(
+115deg,
+rgb(56, 178, 172) 0%,
+rgb(129, 230, 217) 100%
+);
+}
+
+.plan:nth-child(2) {
+    background: linear-gradient(
+135deg,
+rgb(76, 81, 191) 0%,
+rgb(102, 126, 234) 100%
+);
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.plan:nth-child(2) .plan__name, .plan:nth-child(2) .plan__price, .plan:nth-child(2) .plan__target, .plan:nth-child(2) .plan__duration, .plan:nth-child(2) .plan__feature {
+    color: #f7fafc;
+}
+
+.plan__name {
+    font-size: 20px;
+}
+
+.plan__top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    line-height: 1.625;
+}
+
+.plan__duration {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.plan:nth-child(2) .plan__middle {
+    border-top: 2px solid rgb(102, 126, 234);
+    border-bottom: 2px solid rgb(102, 126, 234);
+}
+
+.plan__middle {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 2rem;
+}
+
+.plan:nth-child(2) .plan__button {
+    color: #6415ff;
+    background-color: #f7fafc;
+}
+
+@media (max-width: 1280px) {
+    .plan__button {
+        max-width: none;
+    }
+}
+
+.plan__button {
+    border-radius: 0.25rem;
+    background-color: rgb(100 21 255);
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    color: rgb(247 250 252);
+    transition: all 300ms ease;
+    width: 100%;
+    border-radius: 9999px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button {
+    appearance: auto;
+}
+
+.plan {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    width: 100%;
+    max-width: 24rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 2rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    color: rgb(26 32 44);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.plan:nth-child(2) {
+    background: linear-gradient(
+135deg,
+rgb(76, 81, 191) 0%,
+rgb(102, 126, 234) 100%
+);
+}
+
+.plan:nth-child(3) .plan__stripe, .plan:nth-child(3) .plan__button {
+    color: #f7fafc;
+    background: linear-gradient(
+115deg,
+rgb(245, 101, 101) 0%,
+rgb(254, 178, 178) 100%
+);
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+    .plan__bottom {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.plan__bottom {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.plans__blob {
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+    height: 256px;
+    width: 256px;
+    opacity: 0.25;
+}
+
+
+
+.plans__blob {
+    z-index: -10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+    height: 256px;
+    width: 256px;
+    opacity: 0.25;
+}
+
+@media (max-width: 1024px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.plans {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 96px 0;
+}
+
+button.plan__button {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 
