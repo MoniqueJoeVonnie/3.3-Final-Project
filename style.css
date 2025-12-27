@@ -2227,11 +2227,6 @@ h2 {
     font-weight: 700;
 }
 
-.testimonial__bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
 .testimonial__details {
     margin-left: 24px;
 }
@@ -2292,12 +2287,16 @@ svg {
     height: 20px;
 }
 
-.testimonial__bottom div.testimonial__buttons {
+.testimonial__bottom {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
+
+.testimonial__buttons {
+    display: flex;
+    align-items: center;
+}
 
 .testimonial {
     margin-top: 40px;
@@ -2328,10 +2327,6 @@ img.testimonial__img {
     border-radius: 50%;
 }
 
-div.testimonial__buttons {
-    display: flex;
-    align-items: center;
-}
 
 
 
