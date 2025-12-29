@@ -1343,7 +1343,6 @@ img {
 svg:not(:root), symbol, image, marker, pattern, foreignObject {
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 20%
 }
 
 @media (max-width: 1280px) {
@@ -1554,6 +1553,7 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 
 div.value__name {
     width: 104px;
