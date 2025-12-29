@@ -69,6 +69,11 @@ nav {
     padding-top: 32px;
 }
 
+.nav__row {
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav__links {
    display: flex;
    list-style: none;
@@ -102,6 +107,18 @@ nav {
     letter-spacing: 0.6px;
 }
 
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
 .nav__link {
     font-size: 14px;
     font-weight: 600;
@@ -117,6 +134,11 @@ nav {
     margin: 0 24px;
 }
 
+a {
+    display: inline;
+    text-decoration: none;
+}
+
 .nav__link::after {
     content: "";
     position: absolute;
@@ -129,6 +151,16 @@ nav {
     opacity: 0;
 }
 
+.login {
+    margin-left: 48px;
+}
+
+@media (max-width: 1024px) {
+    .btn__menu {
+        display: block;
+    }
+}
+
 .btn__menu {
     display: none;
     background: transparent;
@@ -136,11 +168,31 @@ nav {
     transition: all 300ms ease;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
+svg.button__menu--svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stop-opacity: round;
+}
+
+nav {
+    padding-top: 32px;
+    display: flex;
+}
+
 .btn__menu--svg:hover {
     filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
 }
 
-.modal {
+.menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -158,6 +210,12 @@ nav {
     transition: all 300ms ease;
 }
 
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
 .modal__links {
     width: 100%;
     height: 100%;
@@ -166,7 +224,7 @@ nav {
     align-items: center;
 }
 
-.modal__link {
+.menu__link {
     color: #1a202c;
     font-size: 18px;
     font-weight: 600;
@@ -176,7 +234,7 @@ nav {
     border-bottom: 2px solid transparent;
 }
 
-.modal__link--primary {
+.menu__link--primary {
     color: #f7fafc;
     padding: 12px 32px;
     background: #6415ff;
@@ -184,42 +242,22 @@ nav {
     border: none;
 }
 
-.menu--open .modal {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.btn__menu--close {
+.menu {
     position: fixed;
-    top: 24px;
-    right: 18px;
-}
-
-a {
-    display: inline;
-    text-decoration: none;
-}
-
-.btn__menu--svg {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: currentcolor;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-svg:not(:root), symbol, image, marker, pattern, foreignObject {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-@media (max-width: 1024px) {
-    .btn__menu {
-        display: block;
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 378px;
+    margin: 24px 16px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(300%);
+    transition: all 300ms ease;
 }
 
 .light___StyledCloseIcon-lj69nl-14.fASujC {
@@ -232,12 +270,14 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
     stroke-linejoin: round;
 }
 
-:not(svg), :not(foreignObject) > svg {
-    transform-origin-x: 0px;
-    transform-origin-y: 0px;
-    transform-origin-z: 0px;
-    transform-box: view-box;
+.menu--open .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
 }
+
+
+
 
 
 /* 
@@ -271,11 +311,6 @@ header {
     }
 }
 
-.row {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-}
 
 @media (max-width: 1024px) {
     h1 {
@@ -2341,10 +2376,6 @@ START / CALL TO ACTION ↓
     margin: 0 auto;
 }
 
-path {
-    fill: rgb(80, 17, 204);
-}
-
 .start__blob--1 {
     position: absolute;
     bottom: 0px;
@@ -2567,9 +2598,17 @@ a {
     flex-wrap: wrap;
 }
 
-div.footer__divider {
-    width: 775px;
+.footer__divider {
+    width: 100%;
     height: 2px;
+    margin: 64px 0;
+    background: rgb(116, 44, 255);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer__logo--img {
@@ -2612,21 +2651,20 @@ div.footer__divider {
     width: 16px;
 }
 
-svg {
-    fill: currentcolor;
+.footer__socials {
+    display: flex;
+    align-items: center;
+    margin-left: -16px;
 }
+
+
 
 a {
     display: inline;
     text-decoration: none;
 }
 
-:not(svg), :not(foreignObject) > svg {
-    transform-origin-x: 0px;
-    transform-origin-y: 0px;
-    transform-origin-z: 0px;
-    transform-box: view-box;
-}
+
 
 
 
