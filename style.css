@@ -1555,12 +1555,6 @@ svg:not(:root), symbol, image, marker, pattern, foreignObject {
     overflow-y: hidden;
 }
 
-svg:not(:root), symbol, image, marker, pattern, foreignObject {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 20%;
-}
-
 div.value__name {
     width: 104px;
     height: 24px;
