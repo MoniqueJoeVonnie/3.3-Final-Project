@@ -131,18 +131,9 @@ a {
     margin-left: 48px;
 }
 
-.btn__menu {
-    display: none;
-    background-color: transparent;
-    font-size: 40px;
-    text-align: center;
-    border: none;
-    color: #7342d6
-}
-
 .menu__backdrop {
     position: absolute;
-    background-color: #242424;
+    background-color: rgb(219, 206, 228);
     margin: 16px 24px;
     height: 380px;
     border-radius: 8px;
@@ -155,16 +146,28 @@ a {
     justify-content: center;
     align-items: center;
     display: none;
+    text-decoration: none
+}
+
+.btn__menu {
+    display: none;
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #7342d6
 }
 
 .menu--open .menu__backdrop {
     display: flex;
+    text-decoration: none;
 }
 
 .menu__links {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .menu__list {
@@ -294,6 +297,10 @@ nav {
     background: #6415ff;
     transition: all 300ms ease;
     opacity: 0;
+}
+
+ul.menu__links {
+    list-style: none;
 }
 
 
