@@ -652,12 +652,9 @@ FEATURES ↓
 */
 
 
-#features {
-    position: relative;
-}
-
 #features .row__narrow {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
@@ -2721,23 +2718,236 @@ MOBILE RESPONSIVENESS ↓
 
 */
 
-@media (max-width: 728) {
+
+@media (max-width: 728px) {
+    
+        .row {
+        padding: 0 16px;
+    }
+    
+     .nav__logo img {
+       max-height: 28px;
+        max-width: 100%;
+        height: auto; 
+        width: auto;  
+    }
+
+    .nav__logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+     .nav__logo--title {
+          font-size: 16px;
+        margin-left: 4px;
+        text-align: center;
+    }
+
+      .btn__menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .btn__menu .fas {
+        font-size: 28px;
+    }
+
     header .row {
         flex-direction: column;
     }
 
     h1 {
         text-align: center;
-        font-size: 20px;
+        font-size: 32px;
+        padding: 0 16px;
     }
+
     .header__description--para {
         text-align: center;
-        font-size: 12px;
+        font-size: 13px;
+        padding: 0 16px;  
         }
     
-    .header__email--input
-    
+    .header__email--input {
+       font-size: 14px;
     }
+
+     .header__customers {
+        margin-top: 24px;
+    }
+
+    .header__customers--title {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .header__customers img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .header__customers {
+        padding-right: 0;
+        text-align: center; 
+        margin-top: 24px;
+    }
+
+    .header__email--btn {
+        width: 120px;     
+        font-size: 14px;
+        margin: 6px;
+    }
+
+    .header__email {
+    position: relative;
+    }
+
+    .header__email--input {
+    padding-right: 140px;
+    min-width: 0; 
+    }
+
+    header__email--btn {
+        width: 120px;     
+        font-size: 14px;
+        margin: 6px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 728px) {
+
+    .section__tag {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+     #features .section__title,
+    #pricing .section__title {
+        font-size: 36px;
+        text-align: center; 
+    }
+
+      .section__para {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .feature {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+        min-width: 0;
+    }
+
+     .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 16px;
+        margin-top: 12px;
+    }
+
+   .feature__img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+     .feature__text {
+        margin-left: 0;
+        margin-top: 12px;
+        max-width: 480px;
+    }
+
+      .feature__title {
+        line-height: clamp(1.2, 2.5vw, 1.4);
+        text-align: center;
+    }
+
+    h2 {
+         font-size: 1.4em;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+        .section__title {
+        font-size: 56px;
+        margin-bottom: 24px;
+    }
+
+    .feature__para {
+        max-width: 100%;      
+        font-size: 15px;      
+        text-align: center;   
+        line-height: 1.6;     
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 728px) {
+
+    section {
+        padding: 0 16px; 
+    }
+
+       .container {
+        padding: 60px 16px; 
+    }
+
+       #quality .row,
+        #values .row {
+        flex-direction: column-reverse;  
+        align-items: center;             
+        text-align: center;              
+        gap: 16px;                       
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 12px;
+    }
+
+}
+
+
+
+
+
+
+
+
+    .plans {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media (max-width: 728px) {
+    .plans {
+        flex-direction: column;
+        justify-content: flex-start; /* optional, avoids large vertical gaps */
+        gap: 1rem;                   /* recommended for consistent spacing */
+    }
+}
 
 
 
@@ -2796,6 +3006,9 @@ MOBILE RESPONSIVENESS ↓
         display: none;
     }
 }
+
+
+
 
 
 
